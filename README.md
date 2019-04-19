@@ -1,4 +1,4 @@
-<p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
+<p><img width="100%"  src="https://i.imgur.com/shkS8aW.png" alt="Craft CMS"></p>
 
 # Craft Storybook Starter
 
@@ -6,54 +6,39 @@
 
 This starter sets up everything for you to be productive in Storybook and Craft and makes it easy to produce a living styleguide for your site or app.
 
-Storybook runs alongside Craft so you won't need to install any Craft plugins. You won't need to do anything differently with your Twig files, just place them in the Templates folder as per usual.
+Storybook runs alongside Craft so you won't need to install any extra Craft plugins.
 
-You can also host the Storybook built files on a service like Netlify for free.
-
-**Take a look at the [Storybook demo for this repo 👉](https://craft-storybook-starter.netlify.com)**
+It supports Webpack's hot module reloading so you can develop components quickly and in isolation.
 
 ## Getting Started
 
-`cd` into the root directory then:
+`cd` into your project directory then:
 
-**Setup and run Storybook**<br>
+**Download the starter and setup composer**<br>
+`composer create-project ben-rogerson/craft-storybook-starter`
+
+**Install and run Storybook**<br>
 `npm install && npm run start-storybook`
 
-**Setup Craft**<br>
-`composer install && ./craft setup`
+## Working with Storybook
 
-## About Craft CMS
+1. Create a normal Twig file somewhere in your templates folder:<br>
+Eg: `/templates/components/COMPONENT.twig`
+2. Add a matching story in the stories folder:<br>
+Eg: `/stories/COMPONENT.stories.js`
+3. Run `npm run start-storybook` to view the Storybook UI
 
-Craft is a flexible and scalable CMS for creating bespoke digital experiences on the web and beyond.
+**Take a look at the [Storybook demo for this repo 👉](https://craft-storybook-starter.netlify.com)**
 
-It features:
+## Hosting your styleguide
 
-- An intuitive Control Panel for administration tasks and content creation.
-- A clean-slate approach to content modeling and [front-end development](https://docs.craftcms.com/v3/dev/).
-- A built-in Plugin Store with hundreds of free and commercial [plugins](https://plugins.craftcms.com/).
-- A robust framework for [module and plugin development](https://docs.craftcms.com/v3/extend/).
+Storybook builds static file previews for your components. This means you leverage use free and easy hosting services like Netlify.
 
-Learn more about it at [craftcms.com](https://craftcms.com).
+Configure it to run `npm run build-storybook` and serve from the `/build` folder.
 
-## Tech Specs
+You could also use [Github pages](https://github.com/storybooks/storybook-deployer) to host your storybook.
 
-Craft is written in PHP (7+), and built on the [Yii 2 framework](https://www.yiiframework.com/). It can connect to MySQL (5.5+) and PostgreSQL (9.5+) for content storage.
+## Links
 
-## Installation
-
-See the following documentation pages for help installing Craft 3:
-
-- [Server Requirements](https://docs.craftcms.com/v3/requirements.html)
-- [Installation Instructions](https://docs.craftcms.com/v3/installation.html)
-- [Upgrading from Craft 2](https://docs.craftcms.com/v3/upgrade.html)
-
-## Popular Resources
-
-- **[Documentation](http://docs.craftcms.com/v3/)** – Read the official docs.
-- **[Guides](https://craftcms.com/guides)** – Follow along with the official guides.
-- **[#craftcms](https://twitter.com/hashtag/craftcms)** – See the latest tweets about Craft.
-- **[Discord](https://craftcms.com/discord)** – Meet the community.
-- **[Stack Exchange](http://craftcms.stackexchange.com/)** – Get help and help others.
-- **[CraftQuest](https://craftquest.io/)** – Watch unlimited video lessons and courses.
-- **[Craft Link List](http://craftlinklist.com/)** – Stay in-the-know.
-- **[nystudio107 Blog](https://nystudio107.com/blog)** – Learn Craft and modern web development.
+- [Craft CMS Docs](https://docs.craftcms.com)
+- [Storybook Docs](https://storybook.js.org/docs/basics/introduction/)
