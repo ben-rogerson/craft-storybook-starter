@@ -35,7 +35,7 @@ Eg: `/stories/COMPONENT.stories.js`
 
 ## Hosting your styleguide
 
-Storybook builds static file previews for your components. This means you leverage use free and easy hosting services like Netlify.
+Storybook builds static file previews for your components. This means you can leverage easy (and free) hosting services like Netlify.
 
 Configure it to run `npm run build-storybook` and serve from the `/build` folder.
 
