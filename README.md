@@ -41,7 +41,29 @@ Configure it to run `npm run build-storybook` and serve from the `/build` folder
 
 You could also use [Github pages](https://github.com/storybooks/storybook-deployer) to host your storybook.
 
+## Adding Storybook to an existing Craft project
+
+Adding Storybook to your project is a quick process:
+
+1. Copy `.storybook/*` into your project
+2. Copy `stories/*` into your project
+3. Copy `templates/components/*` into your project
+4. Install the `devDependencies` listed in package.json:<br>
+    ```shell
+    npm i -D @babel/core @babel/preset-env @storybook/addon-a11y @storybook/addon-knobs @storybook/html babel-loader css-loader node-sass sass-loader style-loader twig twig-loader webpack-cli
+    ```
+5. Add the following scripts into your `package.json`:
+    ```js
+    "scripts": {
+        "start-storybook": "start-storybook",
+        "build-storybook": "build-storybook -c .storybook -o build"
+    },
+    ```
+6. To start Storybook, run `npm run start-storybook`
+
 ## Links
 
-- [Craft CMS Docs](https://docs.craftcms.com)
+- [Writing Storybook Stories](https://storybook.js.org/docs/basics/writing-stories/#writing-stories)
+- [Another Storybook demo](https://storybooks-html.netlify.com)
 - [Storybook Docs](https://storybook.js.org/docs/basics/introduction/)
+- [Craft CMS Docs](https://docs.craftcms.com)
