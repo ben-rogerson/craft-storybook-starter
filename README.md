@@ -4,7 +4,13 @@
 
 [Storybook](https://storybook.js.org/) is an open source tool for developing UI components in isolation. It makes building stunning UIs organized and efficient.
 
-This starter sets up everything for you to be productive in Storybook.
+This starter sets up everything for you to be productive in Storybook and Craft and makes it easy to produce a living styleguide for your site or app.
+
+Storybook runs alongside Craft so you won't need to install any Craft plugins. You won't need to do anything differently with your Twig files, just place them in the Templates folder as per usual.
+
+You can also host the Storybook built files on a service like Netlify for free.
+
+**Take a look at the [Storybook demo for this repo 👉](https://craft-storybook-starter.netlify.com)**
 
 ## Getting Started
 
