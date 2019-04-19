@@ -10,15 +10,20 @@ Storybook runs alongside Craft so you won't need to install any extra Craft plug
 
 It supports Webpack's hot module reloading so you can develop components quickly and in isolation.
 
+**Take a look at the [Storybook demo for this repo 👉](https://craft-storybook-starter.netlify.com)**
+
 ## Getting Started
 
-`cd` into your project directory then:
+**Setup Storybook**
 
-**Download the starter and setup composer**<br>
+1. In your terminal, cd into your projects directory then run:<br>
 `composer create-project ben-rogerson/craft-storybook-starter`
+2. CD into the project<br>`cd craft-storybook-starter`
+3. Install and launch storybook:<br> `npm install && npm run start-storybook`
 
-**Install and run Storybook**<br>
-`npm install && npm run start-storybook`
+**Setup Craft**
+
+Follow the instructions to install Craft CMS shown in your terminal after step 1.
 
 ## Working with Storybook
 
@@ -27,8 +32,6 @@ Eg: `/templates/components/COMPONENT.twig`
 2. Add a matching story in the stories folder:<br>
 Eg: `/stories/COMPONENT.stories.js`
 3. Run `npm run start-storybook` to view the Storybook UI
-
-**Take a look at the [Storybook demo for this repo 👉](https://craft-storybook-starter.netlify.com)**
 
 ## Hosting your styleguide
 
