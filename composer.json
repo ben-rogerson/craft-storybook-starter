@@ -1,11 +1,13 @@
 {
-  "name": "craftcms/craft",
-  "description": "Craft CMS",
+  "name": "ben-rogerson/craft-storybook-starter",
+  "description": "This starter sets up everything for you to be productive in Storybook and Craft and makes it easy to produce a living styleguide for your site or app.",
   "keywords": [
     "craft",
     "cms",
     "craftcms",
-    "project"
+    "project",
+    "storybook",
+    "styleguide"
   ],
   "license": "Unlicense",
   "homepage": "https://craftcms.com/",
