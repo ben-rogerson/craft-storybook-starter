@@ -13,7 +13,9 @@
   "devDependencies": {
     "@babel/core": "7.4.3",
     "@babel/preset-env": "7.4.3",
+    "@storybook/addon-a11y": "^5.0.10",
     "@storybook/addon-knobs": "5.0.10",
+    "@storybook/html": "^5.0.10",
     "babel-loader": "^8.0.5",
     "css-loader": "2.1.1",
     "node-sass": "4.11.0",
@@ -23,7 +25,5 @@
     "twig-loader": "0.4.1",
     "webpack-cli": "3.3.0"
   },
-  "dependencies": {
-    "@storybook/html": "^5.0.10"
-  }
+  "dependencies": {}
 }
