@@ -1,0 +1,59 @@
+{# Accessible input #}
+
+<div class="input {{ error ? 'input-has-error' }}{{ isDisabled|default ? ' input-is-disabled' }}">
+    <label for="input-field" class="input-label">
+        {{ label|default('No label specified') }}{{ isRequired|default ? ' *' }}
+    </label>
+    <input id="input-field" class="input-field" value="{{ value }}" type="text"{{ error|default|length > 0 ? ' aria-invalid="true"' }}{{ error|default ? ' aria-describedby="input-error-message"' }}{{ isDisabled|default ? ' disabled' }}{{ isRequired|default ? ' required' }} />
+    {% if error|default %}<div id="input-error-message" class="input-error-message">{{ error }}</div>{% endif %}
+</div>
+
+<style>
+    {# Demo styles #}
+    .input {
+        font-size: 100%;
+        font-family: arial, helvetica;
+        color: #333;
+    }
+    .input-has-error * {
+        color: red;
+    }
+    .input-is-disabled * {
+        color: grey;
+        cursor: not-allowed;
+    }
+    .input-label {
+        display: block;
+        margin-bottom: .5em;
+    }
+    .input-field {
+        display: block;
+        color: #333;
+        background-color: white;
+        padding: 1em;
+        border: 2px solid;
+        border-radius: 4px;
+        font-size: inherit;
+        font-family: inherit;
+        width: 100%;
+        border-color: #AAA;
+        outline: 0;
+    }
+    .input-field:hover:not(:disabled),
+    .input-field:focus:not(:disabled) {
+        border-color: #333;
+    }
+    .input-has-error .input-field {
+        border-color: red;
+    }
+    .input-is-disabled .input-field {
+        color: grey;
+    }
+    .input-label,
+    .input-error-message {
+        font-size: 80%;
+    }
+    .input-error-message {
+        margin-top: .5em;
+    }
+</style>
