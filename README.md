@@ -1,6 +1,22 @@
 <p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
 
-## About Craft CMS 
+# Craft Storybook Starter
+
+[Storybook](https://storybook.js.org/) is an open source tool for developing UI components in isolation. It makes building stunning UIs organized and efficient.
+
+This starter sets up everything for you to be productive in Storybook.
+
+## Getting Started
+
+`cd` into the root directory then:
+
+**Setup and run Storybook**<br>
+`npm install && npm run start-storybook`
+
+**Setup Craft**<br>
+`composer install && ./craft setup`
+
+## About Craft CMS
 
 Craft is a flexible and scalable CMS for creating bespoke digital experiences on the web and beyond.
 
