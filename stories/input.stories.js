@@ -1,4 +1,6 @@
 import { storiesOf } from '@storybook/html';
+// Learn more about the knobs addon:
+// https://github.com/storybooks/storybook/blob/master/addons/knobs/README.md
 import { text, boolean, number } from '@storybook/addon-knobs';
 
 // Twig component
