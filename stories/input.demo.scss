@@ -1,6 +1,6 @@
 /*
-This file is just for the Input demo
-You shouldn't place your css here in `/stories`
+This file is here just for the Input demo.
+You shouldn't place your styles here in `/stories`.
 */
 
 .input {
@@ -32,11 +32,11 @@ You shouldn't place your css here in `/stories`
 }
 
 .input-field:focus:not(:disabled) {
-    border-color: #333;
+    border-color: #ff88b0;
 }
 
 .input-has-error .input-field {
-    border-color: #e4003c;
+    border-color: #df034d;
 }
 
 .input-is-disabled .input-field {
@@ -48,11 +48,15 @@ You shouldn't place your css here in `/stories`
     font-weight: bold;
 }
 
+.input-required {
+    color: #df034d;
+}
+
 .input-error-message {
     font-size: 85%;
 }
 
 .input-error-message {
     margin-top: .75em;
-    color: #ff4785;
+    color: #df034d;
 }

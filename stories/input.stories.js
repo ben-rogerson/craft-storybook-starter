@@ -7,8 +7,9 @@ import { text, boolean, number } from '@storybook/addon-knobs';
 import component from './../templates/components/input.twig';
 
 // Component styles
-// Using .scss? https://storybook.js.org/docs/configurations/custom-webpack-config/#full-control-mode
-import './input.demo.css';
+// You'll probably import the component style file from your src folder
+// eg: `import './../src/scss/input.demo.scss';`
+import './input.demo.scss';
 
 // Font-size slider for component resizing
 // (Use ems in your component styles)
