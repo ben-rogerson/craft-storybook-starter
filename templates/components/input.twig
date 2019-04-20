@@ -15,7 +15,7 @@ Usage example:
 
 <div class="input {{ error ? 'input-has-error' }}{{ isDisabled|default ? ' input-is-disabled' }}">
     <label for="input-field" class="input-label">
-        {{ label|default('No label specified') }}{{ isRequired|default ? ' *' }}
+        {{ label|default('No label specified') }}{% if isRequired|default %}<span class="input-required"> *</span>{% endif %}
     </label>
     <input id="input-field" class="input-field" value="{{ value }}" type="text"{{ error|default|length > 0 ? ' aria-invalid="true"' }}{{ error|default ? ' aria-describedby="input-error-message"' }}{{ isDisabled|default ? ' disabled' }}{{ isRequired|default ? ' required' }} />
     {% if error|default %}<div id="input-error-message" class="input-error-message">{{ error }}</div>{% endif %}
