@@ -1,4 +1,4 @@
-<p><img width="100%"  src="https://i.imgur.com/shkS8aW.png" alt="Craft CMS"></p>
+<p><img width="100%"  src="https://i.imgur.com/79NC4st.png" alt="Craft CMS"></p>
 
 # Craft Storybook Starter
 
@@ -6,9 +6,9 @@
 
 This starter sets up everything for you to be productive in Storybook and Craft and makes it easy to produce a living styleguide for your site or app.
 
-Storybook runs alongside Craft so you won't need to install any extra Craft plugins.
+Storybook runs outside of Craft so you won't need to install any extra Craft plugins.
 
-It supports Webpack's hot module reloading so you can develop components quickly and in isolation.
+It supports the Webpack hot module reloading feature so you can develop components quickly in isolation.
 
 **Take a look at the [Storybook demo for this repo 👉](https://craft-storybook-starter.netlify.com)**
 
