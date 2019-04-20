@@ -6,9 +6,16 @@
 
 This starter sets up everything for you to be productive in Storybook and Craft and makes it easy to produce a living styleguide for your site or app.
 
-Storybook runs outside of Craft so you won't need to install any extra Craft plugins.
+🎉 Storybook runs outside of Craft so you won't need to install any extra Craft plugins.
 
-It supports the Webpack hot module reloading feature so you can develop components quickly in isolation.
+## Features
+
+👍 Hot module reloading + Auto style updates<br>
+👍 SCSS support by default<br>
+👍 Automatic accessibility tests<br>
+👍 Color accessibility previews<br>
+👍 Device size previews<br>
+👍 Component playground context controls
 
 **Take a look at the [Storybook demo for this repo 👉](https://craft-storybook-starter.netlify.com)**
 
