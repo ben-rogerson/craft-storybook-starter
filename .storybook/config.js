@@ -9,7 +9,7 @@ addParameters({
     }
 });
 addDecorator(withKnobs);
-addDecorator(withA11y)
+addDecorator(withA11y);
 
 // Import all files in the stories directory ending in *.stories.js
 const req = require.context('../stories', true, /.stories.js$/);
