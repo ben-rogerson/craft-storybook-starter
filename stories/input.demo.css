@@ -1,0 +1,58 @@
+/*
+This file is just for the Input demo
+You shouldn't place your css here in `/stories`
+*/
+
+.input {
+    font-size: 110%;
+    color: #333;
+}
+
+.input-is-disabled {
+    color: grey;
+    cursor: not-allowed;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: .75em;
+}
+
+.input-field {
+    display: block;
+    background-color: white;
+    padding: 1em;
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    outline: 0;
+    border-color: #ff4785;
+}
+
+.input-field:focus:not(:disabled) {
+    border-color: #333;
+}
+
+.input-has-error .input-field {
+    border-color: #e4003c;
+}
+
+.input-is-disabled .input-field {
+    color: grey;
+    border-color: #CCC;
+}
+
+.input-label {
+    font-weight: bold;
+}
+
+.input-error-message {
+    font-size: 85%;
+}
+
+.input-error-message {
+    margin-top: .75em;
+    color: #ff4785;
+}

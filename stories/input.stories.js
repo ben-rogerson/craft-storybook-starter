@@ -1,7 +1,12 @@
 import { storiesOf } from '@storybook/html';
 import { text, boolean, number } from '@storybook/addon-knobs';
 
+// Twig component
 import component from './../templates/components/input.twig';
+
+// Component styles
+// Using .scss? https://storybook.js.org/docs/configurations/custom-webpack-config/#full-control-mode
+import './input.demo.css';
 
 // Font-size slider for component resizing
 // (Use ems in your component styles)
@@ -15,6 +20,7 @@ const scaleSlider = contents => {
     return `<div style="font-size:${scale}em">${contents}</div>`
 };
 
+// The default context for your Twig component
 const defaultConfig = {
     label: 'Enter your greeting',
     error: '',
@@ -23,12 +29,14 @@ const defaultConfig = {
     isRequired: false,
 }
 
+// Set the Group name
 storiesOf('Input', module)
 
-// This example lets you play with the context through the knobs plugin
-.add('playground', () => scaleSlider(`
+// Context playground with the knobs plugin
+// If you want the playground on every item, move this into defaultConfig
+.add('context playground', () => scaleSlider(`
 
-    ${component({ ...defaultConfig, ...{
+    ${component({...defaultConfig, ...{
         label: text('label', 'Enter your greeting'),
         error: text('error', ''),
         value: text('value', 'Welcome to componentville'),
@@ -37,7 +45,6 @@ storiesOf('Input', module)
     }})}
 
 `))
-
 .add('with disabled', () => `
 
     ${component({
@@ -46,7 +53,6 @@ storiesOf('Input', module)
     })}
 
 `)
-
 .add('with required', () => `
 
     ${component({
@@ -55,7 +61,6 @@ storiesOf('Input', module)
     })}
 
 `)
-
 .add('with error', () => `
 
     ${component({

@@ -2,13 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = ({ config, mode }) => {
-    config = Object.assign({
-        module: {
-            rules: [],
-        },
-        plugins: [],
-    }, config || {});
 
+    // Add twig support to Webpack
     config.module.rules.push({
         test: /\.twig$/,
         loader: 'twig-loader',
@@ -16,7 +11,7 @@ module.exports = ({ config, mode }) => {
 
     // SCSS support
     // You'll need to npm install the loaders
-    // npm install -D style-loader css-loader sass-loader
+    // `npm install -D style-loader css-loader sass-loader`
     // Then import your .scss into the stories/XXXX.stories.js file
 
     // config.module.rules.push({
@@ -25,9 +20,9 @@ module.exports = ({ config, mode }) => {
     //     include: path.resolve(__dirname, '../'),
     // });
 
-    config.plugins = config.plugins.filter(
-        plugin => !(plugin instanceof webpack.DefinePlugin)
-    );
+    // config.plugins = config.plugins.filter(
+    //     plugin => !(plugin instanceof webpack.DefinePlugin)
+    // );
 
-    return config
+    return config;
 };
