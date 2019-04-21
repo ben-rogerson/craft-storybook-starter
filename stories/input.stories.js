@@ -29,6 +29,7 @@ const container = children => {
 // Generate data with Faker
 // https://github.com/marak/Faker.js/#api-methods
 const fullName = Faker.name.findName();
+const fullNameEg = Faker.name.findName();
 
 // Set the Group name
 storiesOf('Input', module)
@@ -40,6 +41,7 @@ storiesOf('Input', module)
         error: text('error', ''),
         isDisabled: boolean('isDisabled', false),
         isRequired: boolean('isRequired', false),
+        placeholder: text('placeholder', `Eg: ${fullNameEg}`),
     })
 
 ))
@@ -51,6 +53,7 @@ storiesOf('Input', module)
         error: text('error', ''),
         isDisabled: boolean('isDisabled', false),
         isRequired: boolean('isRequired', false),
+        placeholder: text('placeholder', `Eg: ${fullNameEg}`),
     })
 
 ))
@@ -62,6 +65,7 @@ storiesOf('Input', module)
         error: text('error', ''),
         isDisabled: boolean('isDisabled', true),
         isRequired: boolean('isRequired', false),
+        placeholder: text('placeholder', `Eg: ${fullNameEg}`),
     })
 
 ))
@@ -73,6 +77,7 @@ storiesOf('Input', module)
         error: text('error', ''),
         isDisabled: boolean('isDisabled', false),
         isRequired: boolean('isRequired', true),
+        placeholder: text('placeholder', `Eg: ${fullNameEg}`),
     })
 
 ))
@@ -81,9 +86,10 @@ storiesOf('Input', module)
     component({
         label: text('label', 'Full name'),
         value: text('value', fullName),
-        error: text('error', 'Sorry, that\'s a poor name'),
+        error: text('error', 'Sorry, that’s a poor name. Try another.'),
         isDisabled: boolean('isDisabled', false),
         isRequired: boolean('isRequired', false),
+        placeholder: text('placeholder', `Eg: ${fullNameEg}`),
     })
 
 ));
