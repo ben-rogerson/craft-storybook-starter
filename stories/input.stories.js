@@ -32,11 +32,22 @@ const fullName = Faker.name.findName();
 
 // Set the Group name
 storiesOf('Input', module)
-.add('default', () => container(
+.add('filled', () => container(
 
     component({
         label: text('label', 'Full name'),
         value: text('value', fullName),
+        error: text('error', ''),
+        isDisabled: boolean('isDisabled', false),
+        isRequired: boolean('isRequired', false),
+    })
+
+))
+.add('empty', () => container(
+
+    component({
+        label: text('label', 'Full name'),
+        value: text('value', ''),
         error: text('error', ''),
         isDisabled: boolean('isDisabled', false),
         isRequired: boolean('isRequired', false),
