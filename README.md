@@ -29,11 +29,15 @@ This starter has many modern features including:
 ### Create a new project
 
 1. In your terminal, cd into your projects directory then run:<br>
-`composer create-project ben-rogerson/craft-storybook-starter`
-2. CD into the project and install storybook<br>`cd craft-storybook-starter && npm install`
-3. Run Storybook with `npm run storybook`
+    ```
+    git clone https://github.com/ben-rogerson/craft-storybook-starter.git && cd craft-storybook-starter && npm install
+    ```
+2. Run Storybook with `npm run storybook`
 
-To setup Craft CMS, follow the installation instructions shown in your terminal after step 1.
+To setup Craft CMS, run this command and follow the instructions:
+```
+composer install && ./craft setup
+```
 
 ### Bring into an existing project
 
