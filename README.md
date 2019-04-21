@@ -2,43 +2,66 @@
 
 # Craft Storybook Starter
 
-[Storybook](https://storybook.js.org/) is an open source tool for developing UI components in isolation. It makes building stunning UIs organized and efficient.
+[Storybook](https://storybook.js.org/) is an open source tool for developing UI components in isolation.<br>
+It makes building stunning UIs organized and efficient.
 
 This starter sets up everything for you to be productive in Storybook and Craft and makes it easy to produce a living styleguide for your site or app.
 
-🎉 Storybook runs outside of Craft so you won't need to install any extra Craft plugins.
+🎉 Storybook runs in JavaScript outside Craft and doesn't require a Craft plugin.
 
-## Features
+## Storybook Features
 
-👍 Hot module reloading + Auto style updates<br>
-👍 SCSS support by default<br>
+This starter has many modern features including:
+
+👍 Hot module reloading<br>
 👍 Automatic accessibility tests<br>
-👍 Color accessibility previews<br>
-👍 Device size previews<br>
-👍 Component playground context controls
+👍 Color accessibility tests<br>
+👍 Fake data generator (Faker)<br>
+👍 Sass support<br>
+👍 Device previews<br>
+👍 Extendable Webpack config<br>
+👍 Static site generator
 
-**Take a look at the [Storybook demo for this repo 👉](https://craft-storybook-starter.netlify.com)**
+**[View the static site demo](https://craft-storybook-starter.netlify.com)** 👉
 
 ## Getting Started
 
-**Setup Storybook**
+### Create a new project
 
 1. In your terminal, cd into your projects directory then run:<br>
 `composer create-project ben-rogerson/craft-storybook-starter`
-2. CD into the project<br>`cd craft-storybook-starter`
-3. Install and launch storybook:<br> `npm install && npm run start-storybook`
+2. CD into the project and install storybook<br>`cd craft-storybook-starter && npm install`
+3. Run Storybook with `npm run storybook`
 
-**Setup Craft**
+To setup Craft CMS, follow the installation instructions shown in your terminal after step 1.
 
-Follow the instructions to install Craft CMS shown in your terminal after step 1.
+### Bring into an existing project
+
+Adding Storybook into your project is a quick process:
+
+1. Copy `.storybook/*` into your project
+2. Copy `stories/*` into your project
+3. Copy `templates/components/*` into your project
+4. Install the `devDependencies` listed in package.json:<br>
+    ```shell
+    npm i -D @babel/core @babel/preset-env @storybook/addon-a11y @storybook/addon-knobs @storybook/addon-viewport @storybook/html faker babel-loader css-loader node-sass sass-loader style-loader twig twig-loader webpack-cli
+    ```
+5. Add the following scripts into your `package.json`:
+    ```js
+    "scripts": {
+        "storybook": "start-storybook",
+        "build-storybook": "build-storybook -c .storybook -o build"
+    },
+    ```
+6. To start Storybook, run `npm run storybook`
 
 ## Working with Storybook
 
 1. Create a normal Twig file somewhere in your templates folder:<br>
-Eg: `/templates/components/COMPONENT.twig`
+Eg: `/templates/components/[component].twig`
 2. Add a matching story in the stories folder:<br>
-Eg: `/stories/COMPONENT.stories.js`
-3. Run `npm run start-storybook` to view the Storybook UI
+Eg: `/stories/[component].stories.js`
+3. Start Storybook with `npm run storybook`
 
 ## Hosting your styleguide
 
@@ -47,26 +70,6 @@ Storybook builds static file previews for your components. This means you can le
 Configure it to run `npm run build-storybook` and serve from the `/build` folder.
 
 You could also use [Github pages](https://github.com/storybooks/storybook-deployer) to host your storybook.
-
-## Adding Storybook to an existing Craft project
-
-Adding Storybook to your project is a quick process:
-
-1. Copy `.storybook/*` into your project
-2. Copy `stories/*` into your project
-3. Copy `templates/components/*` into your project
-4. Install the `devDependencies` listed in package.json:<br>
-    ```shell
-    npm i -D @babel/core @babel/preset-env @storybook/addon-a11y @storybook/addon-knobs @storybook/addon-viewport @storybook/html babel-loader css-loader node-sass sass-loader style-loader twig twig-loader webpack-cli
-    ```
-5. Add the following scripts into your `package.json`:
-    ```js
-    "scripts": {
-        "start-storybook": "start-storybook",
-        "build-storybook": "build-storybook -c .storybook -o build"
-    },
-    ```
-6. To start Storybook, run `npm run start-storybook`
 
 ## Links
 
