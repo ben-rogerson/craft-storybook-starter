@@ -14,70 +14,65 @@ import component from './../templates/components/input.twig';
 // eg: `import './../src/scss/input.demo.scss';`
 import './input.demo.scss';
 
-// Font-size slider for component resizing
-// (Use ems in your component styles)
-const scaleSlider = contents => {
+const container = children => {
+    // Font-size slider for component resizing
+    // (Use ems in your component styles)
     const scale = number('scale', 1, {
         range: true,
         min: 1,
         max: 2.5,
         step: 0.25,
     });
-    return `<div style="font-size:${scale}em">${contents}</div>`
+    return `<div style="font-size:${scale}em">${children}</div>`
 };
 
-// The default context for your Twig component
-const defaultConfig = {
-    label: 'Enter your greeting',
-    error: '',
-    value: 'Welcome to componentville',
-    isDisabled: false,
-    isRequired: false,
-}
 // Generate data with Faker
 // https://github.com/marak/Faker.js/#api-methods
 const fullName = Faker.name.findName();
 
 // Set the Group name
 storiesOf('Input', module)
+.add('default', () => container(
 
-// Context playground with the knobs plugin
-// If you want the playground on every item, move this into defaultConfig
-.add('context playground', () => scaleSlider(`
-
-    ${component({...defaultConfig, ...{
-        label: text('label', 'Enter your greeting'),
+    component({
+        label: text('label', 'Full name'),
+        value: text('value', fullName),
         error: text('error', ''),
-        value: text('value', 'Welcome to componentville'),
         isDisabled: boolean('isDisabled', false),
         isRequired: boolean('isRequired', false),
-    }})}
+    })
 
-`))
-.add('with disabled', () => `
+))
+.add('disabled', () => container(
 
-    ${component({
-        ...defaultConfig,
-        ...{ isDisabled: true }
-    })}
+    component({
+        label: text('label', 'Full name'),
+        value: text('value', fullName),
+        error: text('error', ''),
+        isDisabled: boolean('isDisabled', true),
+        isRequired: boolean('isRequired', false),
+    })
 
-`)
-.add('with required', () => `
+))
+.add('required', () => container(
 
-    ${component({
-        ...defaultConfig,
-        ...{ isRequired: true }
-    })}
+    component({
+        label: text('label', 'Full name'),
+        value: text('value', fullName),
+        error: text('error', ''),
+        isDisabled: boolean('isDisabled', false),
+        isRequired: boolean('isRequired', true),
+    })
 
-`)
-.add('with error', () => `
+))
+.add('error', () => container(
 
-    ${component({
-        ...defaultConfig,
-        ...{
-            value: 'What up',
-            error: 'Sorry, that\'s a poor greeting',
-        }
-    })}
+    component({
+        label: text('label', 'Full name'),
+        value: text('value', fullName),
+        error: text('error', 'Sorry, that\'s a poor name'),
+        isDisabled: boolean('isDisabled', false),
+        isRequired: boolean('isRequired', false),
+    })
 
-`);
+));
