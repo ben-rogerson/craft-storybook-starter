@@ -2,6 +2,9 @@ import { storiesOf } from '@storybook/html';
 // Learn more about the knobs addon:
 // https://github.com/storybooks/storybook/blob/master/addons/knobs/README.md
 import { text, boolean, number } from '@storybook/addon-knobs';
+// Faker creates random data for your components
+// https://github.com/marak/Faker.js/#api-methods
+import Faker from 'faker';
 
 // Twig component
 import component from './../templates/components/input.twig';
@@ -31,6 +34,9 @@ const defaultConfig = {
     isDisabled: false,
     isRequired: false,
 }
+// Generate data with Faker
+// https://github.com/marak/Faker.js/#api-methods
+const fullName = Faker.name.findName();
 
 // Set the Group name
 storiesOf('Input', module)
