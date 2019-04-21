@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-storybook": "start-storybook",
+    "storybook": "start-storybook",
     "build-storybook": "build-storybook -c .storybook -o build"
   },
   "keywords": [],
