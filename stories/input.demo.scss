@@ -10,38 +10,48 @@ You shouldn't place your styles here in `/stories`.
 
 .input-is-disabled {
     color: grey;
-    cursor: not-allowed;
 }
 
 .input-label {
     display: block;
     margin-bottom: .75em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
 }
 
 .input-field {
     display: block;
     background-color: white;
-    padding: 1em;
     border: 2px solid;
     border-radius: 4px;
-    font-size: inherit;
     font-family: inherit;
     width: 100%;
     outline: 0;
-    border-color: #ff4785;
+    border-color: #a6aebe;
+    padding: .4em .6em;
+    font-weight: bold;
+    letter-spacing: -.03em;
+    font-size: 2.75em;
+    transition: border-color .25s ease;
 }
 
-.input-field:focus:not(:disabled) {
-    border-color: #ff88b0;
+.input-field:focus:not(:disabled):not([aria-invalid]) {
+    border-color: #777;
 }
 
 .input-has-error .input-field {
-    border-color: #df034d;
+    border-color: #ff4785;
+}
+
+.input-field[aria-invalid] {
+    border-left-width: .15em;
 }
 
 .input-is-disabled .input-field {
     color: grey;
-    border-color: #CCC;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    cursor: not-allowed;
 }
 
 .input-label {
@@ -49,14 +59,11 @@ You shouldn't place your styles here in `/stories`.
 }
 
 .input-required {
-    color: #df034d;
+    color: #ff4785;
 }
 
 .input-error-message {
     font-size: 85%;
-}
-
-.input-error-message {
     margin-top: .75em;
-    color: #df034d;
+    color: #ff4785;
 }
