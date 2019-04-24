@@ -32,7 +32,7 @@ This starter has many modern features including:
 
 1. In your terminal, cd into your projects directory then run:<br>
     `
-    git clone https://github.com/ben-rogerson/craft-storybook-starter.git && cd craft-storybook-starter && npm install
+    git clone https://github.com/ben-rogerson/craft-storybook-starter.git craft-storybook && cd $_ && npm install
     `
 2. Start Storybook with:
    <br>`npm run storybook`
