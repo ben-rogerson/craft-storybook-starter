@@ -73,13 +73,25 @@ Eg: `/templates/components/[component].twig`
 Eg: `/stories/[component].stories.js`
 3. Start Storybook with: `npm run storybook`
 
-## Hosting your styleguide
+## Hosting your Storybook
 
 Storybook builds static file previews for your components. This means you can leverage easy (and free) hosting services like Netlify.
 
 Configure it to run `npm run build-storybook` and serve from the `/build` folder.
 
 You could also use [Github pages](https://github.com/storybooks/storybook-deployer) to host your storybook.
+
+## A heads up: Storybook Twig != Craft Twig
+
+Storybook uses a JavaScript implementation of Twig and you may come across some of its limitations.
+
+Any Craft or Craft Plugin functions, or Twig tags or filters will throw an error.
+Also, [String interpolation](https://twig.symfony.com/doc/2.x/templates.html#string-interpolation) isn’t supported.
+
+While I agree that this isn’t ideal, there is an upside to it. It forces me to write small and basic components. 
+You see this same technique constantly in modern JavaScript apps and it’s a good thing! It’s a technique you can bring to many your Craft Components to reduce their complexity and help you create resilient and reusable components. If you’re interested in the concept check out [Atomic design](http://bradfrost.com/blog/post/atomic-web-design/).
+
+If you’re bringing components into Storybook and you’re having compatibility issues you may need to break it up into a presentational and logic component. The presentational component would have the basic component html and wouldn’t contain the incompatible Twig code. This would be the component you’d display in Storybook.
 
 ## Links
 
