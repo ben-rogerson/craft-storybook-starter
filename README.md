@@ -6,7 +6,7 @@
 It makes building stunning UIs organized and efficient.
 
 🎉 Storybook runs outside Craft in JavaScript and doesn't require a Craft plugin<br>
-🎉 Storybook works with the same Twig files from your project
+🎉 Storybook works with the same Twig files from your project ([with some differences](#user-content-hosting-your-storybook)
 
 This starter sets up everything for you to be productive in Storybook.<br>Use Storybook to create a living styleguide from of your existing site/app.<br>
 Take advantage of the excellent Webpack dev server to create solid components with mock data.
@@ -85,10 +85,11 @@ You could also use [Github pages](https://github.com/storybooks/storybook-deploy
 
 Storybook uses a JavaScript implementation of Twig and you may come across some of its limitations.
 
-Any Craft or Craft Plugin functions, or Twig tags or filters will throw an error.
-Also, [String interpolation](https://twig.symfony.com/doc/2.x/templates.html#string-interpolation) isn’t supported.
+- Any Craft or Craft Plugin functions, or Twig tags or filters will throw an error
+- [String interpolation](https://twig.symfony.com/doc/2.x/templates.html#string-interpolation) isn’t supported
+- Importing components within components isn't supported (perhaps fixable with Webpack adjustments)
 
-While I agree that this isn’t ideal, there is an upside to it. It forces me to write small and basic components.
+While I agree that this isn’t ideal, there is an upside to it. It forces small and basic components.
 You see this same technique constantly in modern JavaScript apps and it’s a good thing! It’s a technique you can also bring to many of your Craft Components. If you’re interested in the concept check out [Atomic design](http://bradfrost.com/blog/post/atomic-web-design/).
 
 If you’re bringing components into Storybook and you’re having compatibility issues you may need to break it up into a presentational and logic component. The presentational component would have the basic component html and wouldn’t contain the incompatible Twig code. This would be the component you’d display in Storybook.
