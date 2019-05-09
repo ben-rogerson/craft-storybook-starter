@@ -7,7 +7,7 @@ import { text, boolean, number } from '@storybook/addon-knobs';
 import Faker from 'faker';
 
 // Twig component
-import component from './../templates/components/input.twig';
+import component from 'components/input.twig';
 
 // Component styles
 // You'll probably import the component style file from your src folder
