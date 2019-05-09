@@ -87,7 +87,7 @@ Storybook uses a JavaScript implementation of Twig and you may come across some 
 
 - Any Craft or Craft Plugin functions, or Twig tags or filters will throw an error
 - [String interpolation](https://twig.symfony.com/doc/2.x/templates.html#string-interpolation) isn’t supported
-- Importing components within components isn't supported (perhaps fixable with Webpack adjustments)
+- ~~Importing components within components isn't supported (perhaps fixable with Webpack adjustments)~~ Importing now works correctly
 
 While I agree that this isn’t ideal, there is an upside to it. It forces small and basic components.
 You see this same technique constantly in modern JavaScript apps and it’s a good thing! It’s a technique you can also bring to many of your Craft Components. If you’re interested in the concept check out [Atomic design](http://bradfrost.com/blog/post/atomic-web-design/).
