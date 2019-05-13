@@ -49,24 +49,28 @@ composer install && ./craft setup
 
 Adding Storybook into your project is a quick process:
 
-1. Grab the repository:<br>`git clone https://github.com/ben-rogerson/craft-storybook-starter.git`
-2. Copy these folders into your project:<br>
-`.storybook`<br>
-`stories`<br>
-`templates/components`
-
-1. Install the Storybook `devDependencies`:<br>
-    ```shell
+1. Grab the repository:
+    ```bash
+    git clone https://github.com/ben-rogerson/craft-storybook-starter.git
+    ```
+2. Copy these folders into your project:
+    ```
+    .storybook
+    stories
+    templates/components
+    ```
+3. Install the Storybook `devDependencies`:<br>
+    ```bash
     npm i -D @babel/core @babel/preset-env @storybook/addon-a11y @storybook/addon-knobs @storybook/addon-viewport @storybook/html faker babel-loader css-loader node-sass sass-loader style-loader twig twig-loader webpack-cli
     ```
-2. Add these script definitions into your `package.json`:
+4. Add these script definitions into your `package.json`:
     ```js
     "scripts": {
         "storybook": "start-storybook",
         "build-storybook": "build-storybook -c .storybook -o build"
     },
     ```
-3. Start Storybook with: `npm run storybook`
+5. Start Storybook with: `npm run storybook`
 
 ## Working with Storybook
 
