@@ -61,7 +61,7 @@ Adding Storybook into your project is a quick process:
     ```
 3. Install the Storybook `devDependencies`:<br>
     ```bash
-    npm i -D @babel/core @babel/preset-env @storybook/addon-a11y @storybook/addon-knobs @storybook/addon-viewport @storybook/html faker babel-loader css-loader node-sass sass-loader style-loader twig twigjs-loader webpack-cli
+    npm i -D @babel/core @babel/preset-env @storybook/addon-a11y @storybook/addon-knobs @storybook/addon-viewport @storybook/html faker babel-loader css-loader node-sass sass-loader style-loader twig twigjs-loader babel-plugin-module-resolver webpack-cli
     ```
 4. Add these script definitions into your `package.json`:
     ```js
