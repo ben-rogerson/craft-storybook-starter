@@ -8,7 +8,7 @@ It makes building stunning UIs organized and efficient.
 🎉 Storybook runs outside Craft in JavaScript and doesn't require a Craft plugin<br>
 🎉 Storybook works with the same Twig files from your project [with some differences](#user-content-hosting-your-storybook)
 
-This starter sets up everything for you to be productive in Storybook.<br>Use Storybook to create a living styleguide from of your existing site/app.<br>
+This starter sets up everything for you to be productive in Storybook.<br>Use Storybook to create a living styleguide from your existing site/app.<br>
 Take advantage of the excellent Webpack dev server to create solid components with mock data.
 
 ## Storybook Features
